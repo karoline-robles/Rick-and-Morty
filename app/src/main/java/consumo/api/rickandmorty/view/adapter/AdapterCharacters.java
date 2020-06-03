@@ -9,11 +9,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 import consumo.api.rickandmorty.R;
+import consumo.api.rickandmorty.model.Result;
 
-import retrofit2.adapter.rxjava2.Result;
 
 public class AdapterCharacters extends RecyclerView.Adapter<AdapterCharacters.ViewHolder> {
     private List<Result> resultList;
@@ -21,6 +23,7 @@ public class AdapterCharacters extends RecyclerView.Adapter<AdapterCharacters.Vi
     public AdapterCharacters(List<Result> resultList) {
         this.resultList = resultList;
     }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -50,16 +53,17 @@ public class AdapterCharacters extends RecyclerView.Adapter<AdapterCharacters.Vi
 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView titulo;
-        ImageView imageView;
+        TextView nome;
+        ImageView img;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            titulo = itemView.findViewById(R.id.txt_card);
-            imageView = itemView.findViewById(R.id.imgCharacter_card);
+            nome = itemView.findViewById(R.id.txt_card);
+            img = itemView.findViewById(R.id.imgCharacter_card);
         }
         public void bind(Result result){
-
+            nome.setText(result.getName());
+            Picasso.get().load(result.getImage()).into(img);
         }
     }
 }
