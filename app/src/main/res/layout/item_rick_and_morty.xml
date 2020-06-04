@@ -22,10 +22,12 @@
             android:layout_gravity="center_horizontal"
             android:scaleType="centerCrop" />
 
-b        <TextView
+b
+
+        <TextView
             android:id="@+id/txt_card"
             android:layout_width="182dp"
-            android:layout_height="wrap_content"
+            android:layout_height="33dp"
             android:layout_gravity="center"
             android:fontFamily="casual"
             android:gravity="center"
