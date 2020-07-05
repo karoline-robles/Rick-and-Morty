@@ -10,8 +10,8 @@
 
     <TextView
         android:id="@+id/titulo"
-        android:layout_width="179dp"
-        android:layout_height="44dp"
+        android:layout_width="205dp"
+        android:layout_height="38dp"
         android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="40dp"
@@ -19,7 +19,7 @@
         android:layout_marginRight="15dp"
         android:text="@string/tituloHome"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -51,7 +51,6 @@ public class AdapterCharacters extends RecyclerView.Adapter<AdapterCharacters.Vi
         notifyDataSetChanged();
     }
 
-
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView nome;
         ImageView img;
